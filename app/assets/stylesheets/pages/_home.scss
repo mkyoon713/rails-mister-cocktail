@@ -1,1 +1,33 @@
 // Specific CSS for your home-page
+.backdrop {
+  background: linear-gradient(rgba(0, 0, 70, 0.5), rgba(28, 181, 224, 0.5)), url('https://images.unsplash.com/photo-1502716502781-621f233d06c4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=73fee454d31f62467490017834fc67ff&auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  height: 86vh;
+}
+
+.home_h1 {
+  margin-top: 0px;
+  color: white;
+  padding-top: 80px;
+  padding-bottom: 30px;
+  font-family: "Montserrat";
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.home_h2 {
+  color: white;
+  font-family: "Roboto Mono";
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.menu {
+  background: white;
+  padding: 10px;
+  margin-left: 480px;
+  margin-top: 55px;
+  width: 350px;
+  font-size: 20px;
+  font-family: "Roboto Mono";
+}

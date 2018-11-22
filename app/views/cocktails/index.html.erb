@@ -1,9 +1,24 @@
-<h1>Cocktails Listing</h1>
-<% @cocktails.each do |cocktail| %>
-<h2><%= cocktail.name %></h2>
-<ul>
-<% cocktail.ingredients.each do |ingredient| %>
-<li><%= ingredient.name %></li>
-<% end %>
-</ul>
-<% end %>
+<div class="overall_container">
+  <h1 class="text-center">Cocktail Stories</h1>
+  <div class="cards_container">
+    <div class="row">
+      <% @cocktails.each do |cocktail| %>
+        <div class="col-xs-12 col-md-6">
+          <div class="card">
+            <h2><%= cocktail.name %></h2>
+              <ul>
+                <% cocktail.ingredients.each do |ingredient| %>
+                  <li><%= ingredient.name %></li>
+                <% end %>
+              </ul>
+              <br>
+              <p>
+                <%= link_to 'View', cocktail_path(cocktail) %> |
+                <%= link_to 'Delete', cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?" } %>
+              </p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
