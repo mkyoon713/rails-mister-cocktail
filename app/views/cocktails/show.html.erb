@@ -6,35 +6,41 @@
   <div class="row">
     <div class="col-xs-12 col-md-6">
       <div class="overall_container card">
-        <h3 class>The Story</h3>
-        <p>Mojo means a magic charm or talisman. It likely has roots in an African language. Some believe that the name was introduced by the slaves in Cuba who worked on sugar cane farms.</p>
-        <br>
-        <p>
-          <%= link_to 'Delete', cocktail_path(@cocktail), method: :delete, data: { confirm: "Are you sure?" } %>
-        </p>
+        <div class="content_container">
+          <h3 class>The Story</h3>
+          <p>Mojo means a magic charm or talisman. It likely has roots in an African language. Some believe that the name was introduced by the slaves in Cuba who worked on sugar cane farms.</p>
+        </div>
+        <div class="foot">
+          <p>
+            <%= link_to 'Delete story', cocktail_path(@cocktail), method: :delete, data: { confirm: "Are you sure?" } %>
+          </p>
+        </div>
       </div>
     </div>
 
     <div class="col-xs-12 col-md-6">
       <div class="overall_container card">
-        <h3 class>Ingredients</h3>
-        <ul>
-        <% @cocktail.ingredients.each do |ingredient| %>
-          <li>
-          <% ingredient.doses.each do |dose| %>
-          <%= ingredient.name %> (<%= dose.description %>)
-          &emsp;
-          <%= link_to cocktail_dose_path(@cocktail, dose), method: :delete, data: { confirm: "Are you sure?" } do %>
-            <i class="fas fa-trash-alt"></i>
+        <div class="content_container">
+          <h3 class>The characters</h3>
+          <ul>
+          <% @cocktail.ingredients.each do |ingredient| %>
+            <li>
+            <% ingredient.doses.each do |dose| %>
+            <%= ingredient.name %> (<%= dose.description %>)
+            &emsp;
+            <%= link_to cocktail_dose_path(@cocktail, dose), method: :delete, data: { confirm: "Are you sure?" } do %>
+              <i class="fas fa-trash-alt"></i>
+            <% end %>
+            <% end %>
+            </li>
           <% end %>
-          <% end %>
-          </li>
-        <% end %>
-        </ul>
-        <br>
-        <p>
-          <%= link_to 'Add ingredient', new_cocktail_dose_path(@cocktail) %>
-        </p>
+          </ul>
+        </div>
+        <div class="foot">
+          <p>
+            <%= link_to 'Add new character', new_cocktail_dose_path(@cocktail) %>
+          </p>
+        </div>
       </div>
     </div>
 

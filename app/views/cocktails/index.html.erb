@@ -5,17 +5,26 @@
       <% @cocktails.each do |cocktail| %>
         <div class="col-xs-12 col-md-6">
           <div class="card">
-            <h2><%= cocktail.name %></h2>
-              <ul>
-                <% cocktail.ingredients.each do |ingredient| %>
-                  <li><%= ingredient.name %></li>
-                <% end %>
-              </ul>
-              <br>
-              <p>
-                <%= link_to 'View', cocktail_path(cocktail) %> |
-                <%= link_to 'Delete', cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?" } %>
-              </p>
+            <div class="outer-container">
+              <div class="body-container">
+                <div class="card-description">
+                  <h2><%= cocktail.name %></h2>
+                  <ul>
+                    <% cocktail.ingredients.each do |ingredient| %>
+                      <li><%= ingredient.name %></li>
+                    <% end %>
+                  </ul>
+                </div>
+                <div class="card-image">
+                  <%= image_tag "image.jpg", width: 270, height: 190 %>
+                </div>
+              </div>
+              <div class="foot">
+                <p>
+                  <%= link_to 'Read story', cocktail_path(cocktail) %>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       <% end %>

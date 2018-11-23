@@ -1,10 +1,7 @@
 .card {
   background-color: white;
-  padding: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
   margin-top: 30px;
-  height: 250px;
+  height: 275px;
   h2 {
     font-size: 22px;
   }
@@ -18,4 +15,36 @@
     font-size: 17px;
     margin-top: 0px;
   }
+  .card-description {
+    width: 270px;
+    height: 190px;
+  }
+  .body-container {
+    padding: 20px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .foot {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 5px;
+    border-top: 2px dotted #F4F4F4;
+  p {
+    margin-bottom: 0px;
+  }
+  }
+}
+
+.content_container {
+  padding: 20px;
+  height: 225px;
+  h3 {
+    margin-top: 5px;
+  }
+}
+
+.back-link {
+  margin-top: 25px;
+  margin-bottom: 0px;
 }

@@ -1,22 +1,30 @@
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-  <% if @dose.errors.any? %>
-    <div class="errors-container">
-     <ul>
-        <% @cocktail.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+<div class="container overall-form">
+
+      <div class="form">
+        <%= simple_form_for [@cocktail, @dose] do |f| %>
+          <% if @dose.errors.any? %>
+            <div class="errors-container">
+             <ul>
+                <% @cocktail.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+                <% end %>
+              </ul>
+           </div>
+          <% end %>
+
+          <div class="group">
+            <%= f.association :ingredient %>
+          </div>
+
+          <div class="group">
+            <%= f.label :dose_amount %>
+            <%= f.text_field :description %>
+          </div>
+
+          <%= f.submit "Add & Mix!", class: "btn btn-primary" %>
         <% end %>
-      </ul>
-   </div>
-  <% end %>
-
-  <div class="form-group">
-    <%= f.association :ingredient %>
+      <div class="back-link">
+      <%= link_to 'Back to Cocktail', cocktail_path(@cocktail) %>
+      </div>
   </div>
-
-  <div class="form-group">
-    <%= f.label :description %>
-    <%= f.text_field :description %>
-  </div>
-
-  <%= f.submit "Add dose", class: "btn btn-primary" %>
-<% end %>
+</div>
