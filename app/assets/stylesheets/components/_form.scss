@@ -1,11 +1,11 @@
 .form {
   background-color: white;
-  padding: 50px;
+  padding: 30px;
   margin-top: 30px;
   font-family: "Montserrat";
   font-size: 20px;
   .btn {
-    margin-top: 30px;
+    margin-top: 20px;
   }
 }
 
@@ -15,11 +15,16 @@
   align-items: center;
   text-align: center;
 
+  .form-control-file {
+    width: 360px;
+    margin: 0px;
+  }
+
   .form-control {
     width: 80%;
     text-align: center;
     margin-right: 0px;
-    margin-left: 32px;
+    margin-left: 22px;
     padding-right: 0px;
     padding-left: 0px
   }
@@ -33,3 +38,17 @@
     display: none;
   }
 }
+
+label {
+  display: flow-root;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.cocktail_photo input {
+  display: flex;
+  padding-left: 55px;
+  height: 34px;
+
+}
+

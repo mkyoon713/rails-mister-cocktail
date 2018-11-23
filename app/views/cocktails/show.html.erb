@@ -1,4 +1,4 @@
-<div class="banner">
+<div class="banner" style="background-image: url('<%= cl_image_path @cocktail.photo %>')">
   <h1 class="text-center transparent-white"><%= @cocktail.name %></h1>
 </div>
 
@@ -8,7 +8,7 @@
       <div class="overall_container card">
         <div class="content_container">
           <h3 class>The Story</h3>
-          <p>Mojo means a magic charm or talisman. It likely has roots in an African language. Some believe that the name was introduced by the slaves in Cuba who worked on sugar cane farms.</p>
+          <p><%= @cocktail.description %></p>
         </div>
         <div class="foot">
           <p>

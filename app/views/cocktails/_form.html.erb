@@ -18,6 +18,16 @@
             <%= f.text_field :name %>
           </div>
 
+          <div class="group">
+            <%= f.label :description %>
+            <%= f.text_field :description %>
+          </div>
+
+          <div class="group">
+            <%= f.input :photo %>
+            <%= f.input :photo_cache, as: :hidden %>
+          </div>
+
           <%= f.submit "Create!", class: "btn btn-primary" %>
         <% end %>
 
